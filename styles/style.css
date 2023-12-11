@@ -2,7 +2,6 @@
 
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
-  padding: 10px;
   background-image: url(../images/cover-image-dark.png);
   background-attachment: fixed;
   background-position: center;
@@ -11,24 +10,50 @@
 
 .header {
   display: grid;
-  /* grid-template-rows: 1fr minmax(min-content, max-content) 1fr; */
   grid-template-rows: 1fr min-content 1fr;
   height: 100vh;
   min-height: 668px;
   position: relative;
   align-items: center;
+  padding: 10px;
 }
 
-  .rec {
+.header::after {
+  content: "";
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  display: block;
+  z-index: 1;
+  width: 25px;
+  height: 25px;
+  border-left: 1px solid var(--accent-color);
+  border-bottom: 1px solid var(--accent-color);
+}
+
+.header::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: block;
+  z-index: 1;
+  width: 25px;
+  height: 25px;
+  border-right: 1px solid var(--accent-color);
+  border-top: 1px solid var(--accent-color);
+}
+
+.rec {
   display: flex;
   gap: 10px;
   align-items: center;
   justify-self: end;
   position: absolute;
   z-index: 1;
-  top: 0;
-  right: 10px;
-  color: #FF0070;
+  top: 10px;
+  right: 20px;
+  color: #ff0070;
   font-family: IBM Plex Mono;
   font-size: 18px;
   font-style: normal;
@@ -36,31 +61,31 @@
   line-height: 25px;
 }
 
-  .rec::before {
-  content: 'rec';
+.rec::before {
+  content: "rec";
   text-transform: uppercase;
 }
 
-  .rec::after {
-  content: '';
+.rec::after {
+  content: "";
   display: inline-block;
   width: 9px;
   height: 9px;
   border-radius: 4.5px;
-  background-color: #FF0070;
+  background-color: #ff0070;
   box-shadow: 0 0 3px 4px var(--accent-color);
 }
 
 .header__theme-menu-button {
   border: none;
   background-color: transparent;
-  /* width: 44px; */
-  height: 23px;
+  padding: 0 13px;
 }
 
 .header__theme-menu-list {
   list-style-type: none;
-  display: grid;
+  display: flex;
+  flex-direction: column;
   gap: 13px;
 }
 
@@ -80,7 +105,7 @@
 
 .decor-span {
   color: var(--span-title-color);
-  text-shadow: 4px 4px 0px #FF0070;
+  text-shadow: 4px 4px 0px var(--accent-color);
   font-family: IBM Plex Mono;
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   font-style: normal;
@@ -90,6 +115,10 @@
 
 .text-header {
   background-color: var(--accent-color);
+}
+
+.main {
+  padding: 40px 10px;
 }
 
 .title-decor {
@@ -108,11 +137,16 @@
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
-  line-height: 23.4px; /* 130% */
+  line-height: 23.4px;
+}
+
+.link-word {
+  text-decoration: none;
+  text-shadow: 2px 2px 0px var(--accent-color);
 }
 
 .title-section {
-  color: var(--accent-color);
+  color: var(--title-section-color);
   font-family: IBM Plex Mono;
   font-size: 18px;
   font-style: normal;
@@ -136,6 +170,10 @@
 }
 
 .title-text {
+  margin-bottom: 10px;
+}
+
+.title-images-block {
   margin-bottom: 10px;
 }
 
@@ -164,9 +202,195 @@
 }
 
 .footer {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
+  min-height: 668px;
+  padding: 10px;
 }
 
+.footer::after {
+  content: "";
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  display: block;
+  z-index: 1;
+  width: 25px;
+  height: 25px;
+  border-left: 1px solid var(--accent-color);
+  border-bottom: 1px solid var(--accent-color);
+}
+
+.footer::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: block;
+  z-index: 1;
+  width: 25px;
+  height: 25px;
+  border-right: 1px solid var(--accent-color);
+  border-top: 1px solid var(--accent-color);
+}
+
+/* Состояния кнопок и ссылок */
+.header__theme-menu-button:hover {
+  border: 1px solid var(--button-border-hover-color);
+}
+
+.header__theme-menu-button:focus-visible {
+  border-bottom: 1px solid var(--button-underline-color);
+  outline: none;
+}
+
+.link-word:hover {
+  border-bottom: 2px solid var(--link-border-color);
+}
+
+.link-word:focus {
+  outline: 1px solid var(--link-border-color);
+}
+
+/* Медиазапросы под экраны >=768px и =<1024px */
+
+@media (width >= 768px) {
+  .header {
+    min-height: 1024px;
+    padding: 20px;
+  }
+  .header::after {
+    bottom: 20px;
+    left: 20px;
+  }
+
+  .header::before {
+    top: 20px;
+    right: 20px;
+  }
+
+  .rec {
+    top: 20px;
+    right: 30px;
+  }
+
+  .header-span {
+    margin-left: -20px;
+  }
+
+  .text-header {
+    justify-self: end;
+    width: 50%;
+  }
+
+  .main {
+    padding: 60px 20px;
+  }
+
+  .information-why {
+    display: grid;
+    grid-template-columns: 236px minmax(min-content, max-content);
+    grid-template-rows: repeat(4, min-content);
+    column-gap: 20px;
+  }
+
+  .title-section {
+    width: 236px;
+    grid-row-start: 1;
+    grid-row-end: -1;
+  }
+
+  .text-about:last-child {
+    margin-bottom: 80px;
+  }
+
+  .information-how {
+    display: grid;
+    grid-template-columns: 236px minmax(min-content, max-content);
+    grid-template-rows: repeat(11, min-content);
+    column-gap: 20px;
+  }
+
+  .title-images-block {
+    margin-bottom: 20px;
+  }
+
+  .images {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, min-content);
+    gap: 20px;
+  }
+
+  .image-1 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  .image-2 {
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column: 3;
+  }
+
+  .image-3 {
+    grid-row-start: 2;
+    grid-row-end: 4;
+  }
+
+  .image-5 {
+    grid-column-start: 2;
+    grid-column-end: 4;
+  }
+
+  .footer {
+    padding: 20px;
+  }
+}
+
+/* Медиазапросы под экраны >=1024px */
+
+@media (width >= 1024px) {
+  .header {
+    min-height: 768px;
+  }
+
+  .header__theme-menu {
+    justify-self: center;
+    align-self: start;
+  }
+
+  .header__theme-menu-list {
+    flex-direction: row;
+  }
+
+  .decor-span {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
+
+  .title-section {
+    width: 315px;
+  }
+
+  .information-why {
+    grid-template-columns: 315px minmax(min-content, max-content);
+  }
+  .information-block {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 20px;
+  }
+
+  .title-block {
+    grid-row: 1;
+  }
+
+  .information-how {
+    display: grid;
+    grid-template-columns: 315px minmax(min-content, max-content);
+    grid-template-rows: repeat(11, min-content);
+    column-gap: 20px;
+  }
+}

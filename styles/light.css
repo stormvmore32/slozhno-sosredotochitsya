@@ -3,10 +3,24 @@
   Здесь окажутся стили, которые нужно переопределить принудительно,
   переключая тему
 */
-
+.theme_light .rec {
+  visibility: hidden;
+}
 .page.theme_light {
   /* сохраните этот селектор в приведённом виде.
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
   */
+    background-image: url(../images/cover-image-light.png);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+  --accent-color: #FF8DCB;
+  --span-title-color: #FFC2E6;
+  --title-section-color: #353430;
+  --title-text-color: #353430;
+  --main-text-color: #353430;
+  --button-border-hover-color: rgba(50, 49, 45, 0.40);
+  --button-underline-color: #353430;
+  --link-border-color: #353430;
 }

@@ -5,6 +5,10 @@
 :root {
   --accent-color: #FF0070;
   --span-title-color: #DB00FF;
+  --title-section-color: #FF0070;
   --title-text-color: #000028;
   --main-text-color: #F1B2CE;
+  --button-border-hover-color: rgba(255, 0, 112, 0.40);
+  --button-underline-color: #FF0070;
+  --link-border-color: #F1B2CE;
 }
