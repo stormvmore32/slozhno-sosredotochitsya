@@ -344,6 +344,16 @@
   .footer {
     --padding-footer: 20px;
   }
+
+  .footer::after {
+    bottom: 20px;
+    left: 20px;
+  }
+  
+  .footer::before {
+    top: 20px;
+    right: 20px;
+  }
 }
 
 /* Медиазапросы под экраны >=1024px */
