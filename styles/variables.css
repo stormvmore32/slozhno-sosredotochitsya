@@ -1,5 +1,6 @@
 :root {
   --cover-images: url(../images/cover-image-dark.png);
+  --main-font: IBM Plex Mono, Arial, sans-serif;
   --accent-color: #ff0070;
   --span-title-color: #db00ff;
   --title-section-color: #ff0070;

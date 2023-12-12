@@ -1,6 +1,7 @@
 .theme_light .rec {
   visibility: hidden;
 }
+
 .page.theme_light {
   --cover-images: url(../images/cover-image-light.png);
   --accent-color: #ff8dcb;
@@ -11,6 +12,12 @@
   --button-border-hover-color: rgba(50, 49, 45, 0.4);
   --button-underline-color: #353430;
   --link-border-color: #353430;
+}
+
+@media (width >= 1024px) {
+  .decor-span {
+    text-shadow: 4px 4px 0px #ff0070;
+  }
 }
 
 @media (prefers-color-scheme: light) {
@@ -32,5 +39,11 @@
 
   .theme_auto .rec {
     visibility: hidden;
+  }
+
+  @media (width >= 1024px) {
+    .decor-span {
+      text-shadow: 4px 4px 0px #ff0070;
+    }
   }
 }
