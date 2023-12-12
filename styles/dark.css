@@ -1,16 +1,11 @@
-/*
-  Специально для тёмной темы при наличии класса,
-  здесь окажутся стили, которые нужно переопределить принудительно,
-  переключая тему
-*/
-
 .page.theme_dark {
-  /* сохраните этот селектор в приведённом виде.
-    Так стили написанные ниже будут иметь больший вес,
-    чем стили в медиазапросе предпочтений пользователя
-  */
-  --accent-color: #FF0070;
-  --span-title-color: #DB00FF;
+  --cover-images: url(../images/cover-image-dark.png);
+  --accent-color: #ff0070;
+  --span-title-color: #db00ff;
+  --title-section-color: #ff0070;
   --title-text-color: #000028;
-  --main-text-color: #F1B2CE;
+  --main-text-color: #f1b2ce;
+  --button-border-hover-color: rgba(255, 0, 112, 0.4);
+  --button-underline-color: #ff0070;
+  --link-border-color: #f1b2ce;
 }

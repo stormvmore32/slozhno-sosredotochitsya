@@ -1,14 +1,14 @@
-/*
-  Переменные для вашего проекта
-  и их переопределение под различные устройства
-*/
 :root {
-  --accent-color: #FF0070;
-  --span-title-color: #DB00FF;
-  --title-section-color: #FF0070;
+  --cover-images: url(../images/cover-image-dark.png);
+  --accent-color: #ff0070;
+  --span-title-color: #db00ff;
+  --title-section-color: #ff0070;
   --title-text-color: #000028;
-  --main-text-color: #F1B2CE;
-  --button-border-hover-color: rgba(255, 0, 112, 0.40);
-  --button-underline-color: #FF0070;
-  --link-border-color: #F1B2CE;
+  --main-text-color: #f1b2ce;
+  --button-border-hover-color: rgba(255, 0, 112, 0.4);
+  --button-underline-color: #ff0070;
+  --link-border-color: #f1b2ce;
+  --padding-header: 10px;
+  --padding-main: 40px 10px;
+  --padding-footer: 10px;
 }

@@ -1,8 +1,5 @@
-/* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
-
 .page {
-  /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
-  background-image: url(../images/cover-image-dark.png);
+  background-image: var(--cover-images);
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
@@ -15,7 +12,7 @@
   min-height: 668px;
   position: relative;
   align-items: center;
-  padding: 10px;
+  padding: var(--padding-header);
 }
 
 .header::after {
@@ -76,10 +73,8 @@
   box-shadow: 0 0 3px 4px var(--accent-color);
 }
 
-.header__theme-menu-button {
-  border: none;
-  background-color: transparent;
-  padding: 0 13px;
+.header__theme-menu {
+  justify-self: end;
 }
 
 .header__theme-menu-list {
@@ -87,10 +82,6 @@
   display: flex;
   flex-direction: column;
   gap: 13px;
-}
-
-.header__theme-menu {
-  justify-self: end;
 }
 
 .header__theme-menu-button {
@@ -101,6 +92,10 @@
   font-weight: 400;
   line-height: 18px;
   text-transform: lowercase;
+  border: none;
+  background-color: transparent;
+  padding: 0 13px;
+  height: 23px;
 }
 
 .decor-span {
@@ -118,7 +113,7 @@
 }
 
 .main {
-  padding: 40px 10px;
+  padding: var(--padding-main);
 }
 
 .title-decor {
@@ -208,7 +203,7 @@
   align-items: center;
   height: 100vh;
   min-height: 668px;
-  padding: 10px;
+  padding: var(--padding-foooter);
 }
 
 .footer::after {
@@ -247,6 +242,10 @@
   outline: none;
 }
 
+.header__theme-menu-button_active {
+  outline: 1px solid var(--button-underline-color);
+}
+
 .link-word:hover {
   border-bottom: 2px solid var(--link-border-color);
 }
@@ -260,7 +259,7 @@
 @media (width >= 768px) {
   .header {
     min-height: 1024px;
-    padding: 20px;
+    --padding-header: 20px;
   }
   .header::after {
     bottom: 20px;
@@ -287,7 +286,7 @@
   }
 
   .main {
-    padding: 60px 20px;
+    --padding-main: 60px 20px;
   }
 
   .information-why {
@@ -346,7 +345,7 @@
   }
 
   .footer {
-    padding: 20px;
+    --padding-footer: 20px;
   }
 }
 
