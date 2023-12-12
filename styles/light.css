@@ -5,6 +5,7 @@
 .page.theme_light {
   --cover-images: url(../images/cover-image-light.png);
   --accent-color: #ff8dcb;
+  --decor-element-color: #353430;
   --span-title-color: #ffc2e6;
   --title-section-color: #353430;
   --title-text-color: #353430;
@@ -24,6 +25,7 @@
   :root {
     --cover-images: url(../images/cover-image-light.png);
     --accent-color: #ff8dcb;
+    --decor-element-color: #353430;
     --span-title-color: #ffc2e6;
     --title-section-color: #353430;
     --title-text-color: #353430;

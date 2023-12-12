@@ -1,6 +1,7 @@
 .page.theme_dark {
   --cover-images: url(../images/cover-image-dark.png);
   --accent-color: #ff0070;
+  --decor-element-color: #FF0070;
   --span-title-color: #db00ff;
   --title-section-color: #ff0070;
   --title-text-color: #000028;

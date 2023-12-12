@@ -24,8 +24,8 @@
   z-index: 1;
   width: 25px;
   height: 25px;
-  border-left: 1px solid var(--accent-color);
-  border-bottom: 1px solid var(--accent-color);
+  border-left: 1px solid var(--decor-element-color);
+  border-bottom: 1px solid var(--decor-element-color);
 }
 
 .header::before {
@@ -37,8 +37,8 @@
   z-index: 1;
   width: 25px;
   height: 25px;
-  border-right: 1px solid var(--accent-color);
-  border-top: 1px solid var(--accent-color);
+  border-right: 1px solid var(--decor-element-color);
+  border-top: 1px solid var(--decor-element-color);
 }
 
 .rec {
@@ -212,8 +212,8 @@
   z-index: 1;
   width: 25px;
   height: 25px;
-  border-left: 1px solid var(--accent-color);
-  border-bottom: 1px solid var(--accent-color);
+  border-left: 1px solid var(--decor-element-color);
+  border-bottom: 1px solid var(--decor-element-color);
 }
 
 .footer::before {
@@ -225,8 +225,8 @@
   z-index: 1;
   width: 25px;
   height: 25px;
-  border-right: 1px solid var(--accent-color);
-  border-top: 1px solid var(--accent-color);
+  border-right: 1px solid var(--decor-element-color);
+  border-top: 1px solid var(--decor-element-color);
 }
 
 /* Состояния кнопок и ссылок */
@@ -320,23 +320,23 @@
     gap: 20px;
   }
 
-  .image-1 {
+  .image-sunset {
     grid-column-start: 1;
     grid-column-end: 3;
   }
 
-  .image-2 {
+  .image-ice-cream {
     grid-row-start: 1;
     grid-row-end: 3;
     grid-column: 3;
   }
 
-  .image-3 {
+  .image-tape {
     grid-row-start: 2;
     grid-row-end: 4;
   }
 
-  .image-5 {
+  .image-street {
     grid-column-start: 2;
     grid-column-end: 4;
   }
